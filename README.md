@@ -44,7 +44,7 @@ Building and training a discriminator model as part of the GAN framework.
 Evaluating the model on the test set and calculating reconstruction errors.
 
 ## Models
-###Transformer-based Autoencoder
+#### Transformer-based Autoencoder
 The Autoencoder uses multi-head attention to capture temporal correlations in time series data. The encoder-decoder architecture facilitates the learning of compressed representations.
 
 #### Discriminator
