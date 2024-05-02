@@ -2,8 +2,6 @@
 
 This project implements an anomaly detection framework that integrates contrastive learning and Generative Adversarial Networks (GANs) to mitigate overfitting in multivariate time series data. The framework utilizes a Transformer-based Autoencoder and data augmentation techniques employing geometric distribution masks.
 
-## Getting Started
-
 ## Dependencies
 
 - Python 3.8+
@@ -24,7 +22,7 @@ cd <repository-directory>
 ## Dataset
 This project uses the PSM dataset provided by eBay. The dataset can be accessed at this GitHub repository.
 
-Files
+#### Files
 train.csv: Training data file.
 test.csv: Test data file.
 test_label.csv: Test labels indicating anomalies.
@@ -49,16 +47,16 @@ Evaluating the model on the test set and calculating reconstruction errors.
 ###Transformer-based Autoencoder
 The Autoencoder uses multi-head attention to capture temporal correlations in time series data. The encoder-decoder architecture facilitates the learning of compressed representations.
 
-### Discriminator
+#### Discriminator
 The discriminator assesses the realism of the reconstructed data, playing a crucial role in the GAN training loop.
 
-### Anomaly Detection
+#### Anomaly Detection
 Anomalies are detected based on thresholds computed from the reconstruction errors and realism scores. The framework identifies data points that deviate significantly from the model's learned distribution.
 
-### Results
+#### Results
 Results include the reconstruction error statistics and realism scores. Detected anomalies are summarized and presented.
 
-### Contributing
+## Contributing
 Contributions to this project are welcome. Please fork the repository and submit pull requests with your features and bug fixes.
 
 ## License
