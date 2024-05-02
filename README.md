@@ -57,6 +57,9 @@ A Transformer-based Autoencoder architecture is employed for feature extraction 
 #### Training
 The Autoencoder model is trained using the preprocessed data. The training process involves minimizing the mean squared error between the input and reconstructed data. This step enables the model to learn meaningful representations of the input data.
 
+![image](https://github.com/Maryam189/Anomaly-Detection-in-Multivariate-Time-Series-Data/assets/76420523/0f785228-14b5-47f3-b2af-235edd40cf59)
+
+
 #### Discriminator
 A discriminator model is built to distinguish between real and reconstructed data samples. This model is trained alongside the Autoencoder as part of the GAN framework.
 
