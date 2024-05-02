@@ -1,6 +1,7 @@
 # Anomaly Detection Framework Using Contrastive Learning and GAN
 
-This project implements an anomaly detection framework that integrates contrastive learning and Generative Adversarial Networks (GANs) to mitigate overfitting in multivariate time series data. The framework utilizes a Transformer-based Autoencoder and data augmentation techniques employing geometric distribution masks.
+## Introduction
+This project implements an anomaly detection framework that leverages contrastive learning and Generative Adversarial Networks (GAN) to address overfitting in multivariate time series data. The implementation integrates various techniques, including data augmentation with geometric distribution masks, a Transformer-based Autoencoder, and contrastive loss, to achieve robust anomaly detection.
 
 ## Dependencies
 
@@ -20,9 +21,9 @@ cd <repository-directory>
 ```
 
 ## Dataset
-This project uses the PSM dataset provided by eBay. The dataset can be accessed at this GitHub repository.
+This project uses the PSM dataset provided by eBay. The dataset can be accessed at this GitHub repository TS-AD-Datasets.
 
-#### Files
+## Files
 train.csv: Training data file.
 test.csv: Test data file.
 test_label.csv: Test labels indicating anomalies.
@@ -43,17 +44,29 @@ Building and training a Transformer-based Autoencoder with TensorFlow.
 Building and training a discriminator model as part of the GAN framework.
 Evaluating the model on the test set and calculating reconstruction errors.
 
-## Models
+## Implementation Details
+#### Data Loading and Preprocessing
+The framework begins by loading the dataset and preprocessing it using pandas DataFrames. This step ensures that the data is ready for further processing and model training.
+
+#### Geometric Masking
+Geometric distribution masks are applied to the data as a data augmentation technique. This helps in introducing variability into the training data while preserving the underlying patterns.
+
 #### Transformer-based Autoencoder
-The Autoencoder uses multi-head attention to capture temporal correlations in time series data. The encoder-decoder architecture facilitates the learning of compressed representations.
+A Transformer-based Autoencoder architecture is employed for feature extraction and reconstruction. This architecture consists of multi-head self-attention layers and feed-forward networks, which are effective in capturing temporal dependencies in time series data.
+
+#### Training
+The Autoencoder model is trained using the preprocessed data. The training process involves minimizing the mean squared error between the input and reconstructed data. This step enables the model to learn meaningful representations of the input data.
 
 #### Discriminator
-The discriminator assesses the realism of the reconstructed data, playing a crucial role in the GAN training loop.
+A discriminator model is built to distinguish between real and reconstructed data samples. This model is trained alongside the Autoencoder as part of the GAN framework.
 
-#### Anomaly Detection
-Anomalies are detected based on thresholds computed from the reconstruction errors and realism scores. The framework identifies data points that deviate significantly from the model's learned distribution.
+#### GAN Model
+The GAN model combines the Autoencoder and discriminator into a unified framework. It utilizes adversarial training to enhance the quality of the reconstructed data while simultaneously training the discriminator to distinguish between real and fake samples.
 
-#### Results
+#### Evaluation
+The trained Autoencoder is evaluated on a separate test dataset to detect anomalies. Reconstruction errors are computed for each data sample, and anomalies are identified based on predefined thresholds.
+
+## Results
 Results include the reconstruction error statistics and realism scores. Detected anomalies are summarized and presented.
 
 ## Contributing
