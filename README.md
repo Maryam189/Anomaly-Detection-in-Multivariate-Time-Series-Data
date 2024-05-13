@@ -73,7 +73,7 @@ The trained Autoencoder is evaluated on a separate test dataset to detect anomal
 Results include the reconstruction error statistics and realism scores. Detected anomalies are summarized and presented.
 
 ## Contributing
-Contributions to this project are welcome. Please fork the repository and submit pull requests with your features and bug fixes.
+Contributions to this project are welcome. Please submit a pull request with your features and bug fixes.
 
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+## Useful Links
+For your convenience, you can access public datasets for time series anomaly detection, such as the PSM dataset from eBay, using the following link: [TS-AD-Dataset](https://github.com/elisejiuqizhang/TS-AD-Datasets)
