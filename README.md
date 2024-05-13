@@ -16,8 +16,8 @@ This project implements an anomaly detection framework that leverages contrastiv
 Clone the repository to your local machine:
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/Maryam189/Anomaly-Detection-in-Multivariate-Time-Series-Data.git
+cd Anomaly-Detection-in-Multivariate-Time-Series-Data
 ```
 
 ## Dataset
@@ -31,7 +31,7 @@ Usage
 Run the script to start the training and evaluation process:
 
 ```bash
-python <script-name>.py
+python model.py
 ```
 
 ## Project Structure
